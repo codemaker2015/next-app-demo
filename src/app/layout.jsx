@@ -1,4 +1,5 @@
-import './globals.css'
+// import './globals.css'
+import styles from './layout.module.css'
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +9,10 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <div className={styles.header}>My First Next App</div>
+        {children}
+      </body>
     </html>
   )
 }
